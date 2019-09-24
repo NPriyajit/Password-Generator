@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="icon" href="password.png">
+        <title>Password Generator</title>
+    </head>
+
+    <body>
+        <div class="topbar">
+            <div class="logo" onclick="window.location.href='#home'">Password Generator <i class="fa fa-gear fa-spin"></i></div>
+            <div class="navbar">
+                <ul>
+                    <li onclick="window.location.href='#home'">Home</li>
+                    <li onclick="window.location='/about.html'">About Us</li>
+                    <li onclick="window.location='/contact.html'">Contact Us</li>
+                    <li onclick="window.location='/privacy.html'">Privacy Policy</li>
+                    <i class="fa fa-toggle-off" title="Dark Mode" id="mode" aria-hidden="true"></i>
+                </ul>
+            </div>
+        </div>
+        <header id="home">
+            <section class="home">
+                <h1>Welcome to Password Generator</h1>
+                <h3>Generate your own elegant password, with security</h3>
+                <button class="btn">Generate</button>
+                <div id="copy">copy</div>
+                <p id="randpass"></p>
+                <i class="fa fa-angle-down"></i>
+            </section>
+        </header>
+
+
+
+        <section class="generator">
+            <div class="leftside">
+                <h1>Make your own password</h1>
+                <div class="form">
+                    <h4>Enter your Data to make a strong password</h4>
+                    <div class="passrow">
+                        <p> Length:</p> <select id="passlen">
+                            <option>-Any Length-</option>
+                            <option>4</option>
+                            <option>8</option>
+                            <option>16</option>
+                            <option>20</option>
+                        </select>
+                    </div>
+                    <div class="passrow">
+                        <p>Small Letters:</p> <input type="text" id="passtext" placeholder="" required>
+                        <p class="check"> <span class=" fa fa-check fatext"></span></p>
+
+                    </div>
+                    <div class="passrow">
+                        <p>Capital Letters:</p> <input type="text" id="passcap" placeholder=" ">
+                        <p class="check"> <span class=" fa fa-check facap"></span></p>
+                    </div>
+                    <div class="passrow">
+                        <p>Digits:</p><input type="text" id="passnum" placeholder="">
+                        <p class="check"> <span class=" fa fa-check fanum"></span></p>
+                    </div>
+                    <div class="passrow">
+                        <p>Symbols:</p><input type="text" id="passsymbols" placeholder="">
+                        <p class="check"> <span class=" fa fa-check fasymb"></span></p>
+                    </div>
+                    <p class="messages"></p>
+                    <p class="passwordtxt">Your Password is: <span class="passtext"></span> </p>
+                    <div class="passbtn">
+                        <button class="submit">Copy</button>
+                        <button class="reset">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="rightside">
+                <p>Here we are providing you a form. In that form you can set up
+                    your own rememberable password. It is pretty simple to create, just fill out the form according to
+                    your length of the password, or you can also create a expanded password by using default value - Any
+                    Length-. We are providing you a validator, where you can test all inputs, it will prompt an error if
+                    any flaw in there.
+                </p>
+            </div>
+            <div class="copyright" onclick="window.open('https://priyajitfolio.netlify.com/','_blank')">&copy;<span
+                    class="yyyy" style="margin-left:5px;"></span> N.Priyajit All Rights Reserved</div>
+        </section>
+        <script src=" app.js">
+        </script>
+    </body>
+
+</html>

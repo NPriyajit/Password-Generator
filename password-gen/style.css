@@ -1,0 +1,1282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(57deg, #1c8256, #178bb5);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.topbar {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.logo {
+  width: 50%;
+  font-size: 2vw;
+  margin-left: 2%;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.6;
+  font-size: 2.1vw;
+}
+
+.navbar {
+  width: 50%;
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  font-size: 1vw;
+}
+
+.navbar li {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar li:first-child {
+  color: skyblue;
+}
+
+.navbar li:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-bottom: 2px solid white;
+}
+
+.navbar li:hover:before {
+  width: 100%;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+.home {
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+  top: 50%;
+  transform: translateY(40%);
+  -webkit-transform: translateY(40%);
+  -moz-transform: translateY(40%);
+  -ms-transform: translateY(40%);
+  -o-transform: translateY(40%);
+  color: white;
+}
+
+.home h1 {
+  font-size: 4vw;
+  font-weight: bolder;
+}
+
+.home h3 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  line-height: 80px;
+  font-size-adjust: 0.58;
+}
+
+.home #randpass {
+  margin-top: 50px;
+}
+
+#randpasstxt {
+  color: rgb(52, 214, 185);
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+#randpasstxt:hover {
+  color: rgb(70, 140, 238);
+}
+
+#copy {
+  opacity: 0;
+  left: 32%;
+  position: absolute;
+  width: 65px;
+  height: 45px;
+  padding-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 18% 20% 37% 0% / 21% 19% 42% 30%;
+  -webkit-border-radius: 18% 20% 37% 0% / 21% 19% 42% 30%;
+  -moz-border-radius: 18% 20% 37% 0% / 21% 19% 42% 30%;
+  -ms-border-radius: 18% 20% 37% 0% / 21% 19% 42% 30%;
+  -o-border-radius: 18% 20% 37% 0% / 21% 19% 42% 30%;
+}
+
+.home .fa {
+  display: none;
+  margin-top: 30px;
+  font-size: 75px;
+  font-weight: 100;
+  animation: arrow 2s infinite alternate;
+  -webkit-animation: arrow 2s infinite alternate;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.home .btn {
+  background-color: lightskyblue;
+  width: 200px;
+  height: 50px;
+  left: 50%;
+  font-size: large;
+  margin-top: 30px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(57deg, #4bc69f, #178bb5);
+  border: 1px solid white;
+}
+
+.home .btn:hover {
+  background: linear-gradient(57deg, #178bb5, #4bc69f);
+}
+
+.generator {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(57deg, #178bb5, #4bc69f);
+  /* clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);*/
+}
+
+.leftside {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+}
+
+.form {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  padding: 50px;
+  border-radius: 47%55%52%49%/9%10%12%14%;
+  -webkit-border-radius: 47%55%52%49%/9%10%12%14%;
+  -moz-border-radius: 47%55%52%49%/9%10%12%14%;
+  -ms-border-radius: 47%55%52%49%/9%10%12%14%;
+  -o-border-radius: 47%55%52%49%/9%10%12%14%;
+}
+
+.leftside h1 {
+  position: absolute;
+  left: 50%;
+  bottom: -14%;
+  color: white;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.form h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  transform: translateX(-1%);
+  -webkit-transform: translateX(-1%);
+  -moz-transform: translateX(-1%);
+  -ms-transform: translateX(-1%);
+  -o-transform: translateX(-1%);
+  margin-bottom: 50px;
+}
+
+.passrow {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.form input,
+select {
+  margin-bottom: 30px;
+  width: 14rem;
+  font-size: 1rem;
+  padding-left: 2px;
+  border: 0.7px solid #474343b6;
+}
+
+.form p {
+  font-size: 1.2rem;
+}
+
+.rightside {
+  background-color: skyblue;
+  width: 35%;
+  padding: 60px;
+  height: auto;
+  border-radius: 0% 55% 27% 38% / 17% 47% 0% 38%;
+  -webkit-border-radius: 0% 55% 27% 38% / 17% 47% 0% 38%;
+  -moz-border-radius: 0% 55% 27% 38% / 17% 47% 0% 38%;
+  -ms-border-radius: 0% 55% 27% 38% / 17% 47% 0% 38%;
+  -o-border-radius: 0% 55% 27% 38% / 17% 47% 0% 38%;
+  overflow: hidden;
+}
+
+.rightside p {
+  margin: 10px 20px 10px 20px;
+  line-height: 1.6;
+}
+
+.check {
+  position: absolute;
+  left: 93%;
+  color: red;
+}
+
+.messages {
+  text-align: center;
+  color: red;
+}
+
+.passwordtxt {
+  text-align: center;
+  margin-top: 5px;
+  color: blue;
+  display: none;
+}
+
+.passbtn {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.passbtn .submit {
+  background-color: lightskyblue;
+  width: 100px;
+  height: 50px;
+  left: 50%;
+  font-size: medium;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(57deg, #4bc69f, #178bb5);
+  border: 1px solid white;
+}
+
+.passbtn .submit:hover {
+  background: linear-gradient(57deg, #178bb5, #4bc69f);
+}
+
+.passbtn .reset {
+  background-color: lightskyblue;
+  width: 100px;
+  height: 50px;
+  left: 50%;
+  font-size: medium;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(57deg, #ba6152, #ca3232);
+  border: 1px solid white;
+}
+
+.passbtn .reset:hover {
+  background: linear-gradient(57deg, #ca3232, #ba6152);
+}
+
+.copyright {
+  color: white;
+  position: absolute;
+  bottom: -96vh;
+  cursor: pointer;
+}
+
+.copyright:hover {
+  color: rgb(52, 214, 185);
+}
+
+/* About us page */
+
+.backhome {
+  width: 200px;
+  height: 60px;
+  font-size: 1.3rem;
+  background: linear-gradient(57deg, #4bc69f, #178bb5);
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.abouttop,
+.privacytop {
+  padding: 50px;
+  color: white;
+}
+
+.abouttop h1,
+.privacytop h1 {
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.fa-angle-left {
+  margin-right: 10px;
+}
+
+.abouttxt {
+  max-width: 70%;
+  left: 50%;
+  top: 50%;
+  line-height: 1.6;
+  font-size: 1.2vw;
+  transform: translate(20%, 40%);
+  -moz-transform: translate(20%, 40%);
+  -ms-transform: translate(20%, 40%);
+  -o-transform: translate(20%, 40%);
+  -webkit-transform: translate(20%, 40%);
+}
+
+.abouttxt a {
+  color: rgb(52, 214, 185);
+  text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+}
+
+.abouttxt a:hover {
+  color: rgb(70, 140, 238);
+  border-bottom: 1px solid rgb(40, 96, 105);
+}
+
+.privtxt {
+  max-width: 70%;
+  left: 50%;
+  top: 50%;
+  line-height: 1.8;
+  transform: translate(20%, 7%);
+  -moz-transform: translate(20%, 7%);
+  -ms-transform: translate(20%, 7%);
+  -o-transform: translate(20%, 7%);
+  -webkit-transform: translate(20%, 7%);
+}
+
+.privtxt h2 {
+  font-size: 1rem;
+}
+
+.privtxt p {
+  font-size: 0.7rem;
+}
+
+#mode,
+#dark {
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+
+.topmenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1220px) {
+  .backhome {
+    width: 180px;
+    height: 60px;
+    font-size: 1rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+  #copy {
+    left: 30%;
+  }
+
+  .privacytop h1 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .abouttop h1 {
+    margin-top: 50px;
+  }
+
+  .abouttxt {
+    max-width: 70%;
+    left: 50%;
+    top: 10%;
+    line-height: 1.6;
+    font-size: 1.2vw;
+    transform: translate(20%, 20%);
+    -moz-transform: translate(20%, 20%);
+    -ms-transform: translate(20%, 20%);
+    -o-transform: translate(20%, 20%);
+    -webkit-transform: translate(20%, 20%);
+  }
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.6;
+    transform: translate(20%, 7%);
+    -moz-transform: translate(20%, 7%);
+    -ms-transform: translate(20%, 7%);
+    -o-transform: translate(20%, 7%);
+    -webkit-transform: translate(20%, 7%);
+  }
+
+  .privtxt h2 {
+    font-size: 0.9rem;
+  }
+
+  .privtxt p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+
+
+  .home h3 {
+    font-size: 1.2rem;
+    margin-top: 25px;
+  }
+
+  #copy {
+    left: 27%;
+  }
+
+  .form h4 {
+    font-size: 1rem;
+  }
+
+  .form p {
+    font-size: 0.9rem;
+  }
+
+  .form input,
+  select {
+
+    width: 13rem;
+    font-size: 0.9rem;
+  }
+
+  .passbtn {
+    margin-top: 30px;
+  }
+
+  .rightside p {
+    font-size: 0.7rem;
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  .home h3 {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .home .btn {
+    font-size: medium;
+    margin-top: 20px;
+  }
+
+  #copy {
+    left: 28%;
+    font-size: 0.8rem;
+    width: 60px;
+    height: 40px;
+  }
+
+  .form h4 {
+    font-size: 0.9rem;
+  }
+
+  .form p {
+    font-size: 0.7rem;
+  }
+
+  .form input,
+  select {
+
+    width: 10rem;
+    font-size: 0.7rem;
+  }
+
+  .passbtn {
+    margin-top: 20px;
+  }
+
+  .rightside p {
+    font-size: 0.6rem;
+  }
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.8rem;
+    width: 80px;
+    height: 40px;
+
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+
+  #randpass {
+    font-size: 0.8rem;
+  }
+
+  .backhome {
+    width: 170px;
+    height: 50px;
+    font-size: 0.9rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .privacytop h1 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .abouttop h1 {
+    margin-top: 10%;
+  }
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.6;
+    transform: translate(20%, 7%);
+    -moz-transform: translate(20%, 7%);
+    -ms-transform: translate(20%, 7%);
+    -o-transform: translate(20%, 7%);
+    -webkit-transform: translate(20%, 7%);
+  }
+
+  .privtxt h2 {
+    font-size: 0.9rem;
+  }
+
+  .privtxt p {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+
+
+  .home h3 {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  #copy {
+    left: 27%;
+  }
+
+  .form h4 {
+    font-size: 0.8rem;
+  }
+
+  .form p {
+    font-size: 0.6rem;
+  }
+
+  .form input,
+  select {
+    width: 10rem;
+    font-size: 0.6rem;
+  }
+
+  .passbtn {
+    margin-top: 20px;
+  }
+
+  .rightside p {
+    font-size: 0.5rem;
+  }
+
+  .check {
+    left: 90%;
+  }
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.6rem;
+    width: 70px;
+    height: 30px;
+  }
+
+  .backhome {
+    width: 150px;
+    height: 50px;
+    font-size: 0.8rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .privacytop h1 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .abouttop h1 {
+    margin-top: 10%;
+  }
+
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.6;
+    transform: translate(20%, 7%);
+    -moz-transform: translate(20%, 7%);
+    -ms-transform: translate(20%, 7%);
+    -o-transform: translate(20%, 7%);
+    -webkit-transform: translate(20%, 7%);
+  }
+
+  .privtxt h2 {
+    font-size: 0.9rem;
+  }
+
+  .privtxt p {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media screen and (max-width: 860px) {
+
+
+  .home h3 {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+
+  #copy {
+    left: 25%;
+  }
+
+  .home .btn {
+    font-size: 0.8rem;
+    width: 180px;
+    height: 40px;
+  }
+
+  .form h4 {
+    font-size: 0.8rem;
+  }
+
+  .form p {
+    font-size: 0.5rem;
+    margin-right: 8px;
+  }
+
+  .form input,
+  select {
+
+    width: 8rem;
+    font-size: 0.5rem;
+  }
+
+  .passbtn {
+    margin-top: 20px;
+  }
+
+  .rightside p {
+    font-size: 0.4rem;
+  }
+
+  .rightside {
+    padding: 50px;
+  }
+
+  .check {
+    left: 90%;
+  }
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.6rem;
+    width: 70px;
+    height: 30px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .backhome {
+    width: 150px;
+    height: 50px;
+    font-size: 0.8rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .privacytop h1 {
+    margin-top: 25px;
+    font-size: 1.5rem;
+  }
+
+  .abouttop h1 {
+    margin-top: 15%;
+  }
+
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.6;
+    transform: translate(20%, 6%);
+    -moz-transform: translate(20%, 6%);
+    -ms-transform: translate(20%, 6%);
+    -o-transform: translate(20%, 6%);
+    -webkit-transform: translate(20%, 6%);
+  }
+
+  .privtxt h2 {
+    font-size: 0.8rem;
+  }
+
+  .privtxt p {
+    font-size: 0.6rem;
+  }
+}
+
+
+
+@media screen and (max-width: 760px) {
+
+
+  .home h3 {
+    font-size: 0.7rem;
+    margin-top: 10px;
+  }
+
+  #copy {
+    left: 20%;
+  }
+
+  .home .btn {
+    font-size: 0.7rem;
+    width: 180px;
+    height: 40px;
+  }
+
+  .form h4 {
+    font-size: 0.7rem;
+  }
+
+  .form p {
+    font-size: 0.4rem;
+    margin-right: 6px;
+  }
+
+  .form input,
+  select {
+
+    width: 6rem;
+    font-size: 0.4rem;
+  }
+
+  .leftside h1 {
+    font-size: 1rem;
+  }
+
+  .passbtn {
+    margin-top: 15px;
+  }
+
+  .rightside {
+    padding: 40px;
+  }
+
+  .rightside p {
+    font-size: 0.3rem;
+  }
+
+  .check {
+    left: 85%;
+  }
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.5rem;
+    width: 65px;
+    height: 25px;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+  }
+
+  .backhome {
+    width: 150px;
+    height: 50px;
+    font-size: 0.8rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .privacytop h1 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .abouttop h1 {
+    margin-top: 20%;
+  }
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.6;
+    transform: translate(20%, 7%);
+    -moz-transform: translate(20%, 7%);
+    -ms-transform: translate(20%, 7%);
+    -o-transform: translate(20%, 7%);
+    -webkit-transform: translate(20%, 7%);
+  }
+
+  .privtxt h2 {
+    font-size: 0.9rem;
+  }
+
+  .privtxt p {
+    font-size: 0.5rem;
+  }
+}
+
+
+@media screen and (max-width: 640px) {
+
+
+  .home h3 {
+    font-size: 0.5rem;
+    margin-top: 5px;
+  }
+
+  #copy {
+    left: 25%;
+    font-size: 0.5rem;
+    width: 50px;
+    height: 30px;
+  }
+
+  .home .btn {
+    font-size: 0.6rem;
+    margin-top: 10px;
+    width: 140px;
+    height: 30px;
+  }
+
+  .form h4 {
+    font-size: 0.4rem;
+  }
+
+  .form p {
+    font-size: 0.2rem;
+    margin-right: 3px;
+  }
+
+  .form input,
+  select {
+
+    width: 4rem;
+    font-size: 0.2rem;
+  }
+
+  .leftside h1 {
+    font-size: 1rem;
+  }
+
+  .passbtn {
+    margin-top: 10px;
+  }
+
+  .rightside {
+    padding: 20px;
+  }
+
+
+  .rightside p {
+    font-size: 0.3rem;
+  }
+
+  .check {
+    left: 80%;
+  }
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.5rem;
+    width: 60px;
+    height: 20px;
+  }
+
+  .copyright {
+    font-size: 0.6rem;
+  }
+
+  #randpass {
+    font-size: 0.6rem;
+  }
+
+  .backhome {
+    width: 150px;
+    height: 50px;
+    font-size: 0.8rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+  .privacytop h1 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+  }
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.5;
+    transform: translate(20%, 6%);
+    -moz-transform: translate(20%, 6%);
+    -ms-transform: translate(20%, 6%);
+    -o-transform: translate(20%, 6%);
+    -webkit-transform: translate(20%, 6%);
+  }
+
+  .privtxt h2 {
+    font-size: 0.7rem;
+  }
+
+  .privtxt p {
+    font-size: 0.5rem;
+  }
+
+  .abouttop h1 {
+    margin-top: 40%;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+  .home h3 {
+    font-size: 0.5rem;
+    margin-top: 0px;
+  }
+
+  .home .btn {
+    font-size: 0.6rem;
+    margin-top: 0px;
+    width: 80px;
+    height: 30px;
+  }
+
+  #copy {
+    left: 20%;
+    font-size: 0.5rem;
+    width: 50px;
+    height: 30px;
+  }
+
+  .form h4 {
+    font-size: 0.5rem;
+    margin-bottom: 30px;
+  }
+
+  .form p {
+    font-size: 0.3rem;
+    margin-right: 10px;
+  }
+
+
+  .form {
+    width: 250px;
+    transform: translate(-15%, 0%);
+    -webkit-transform: translate(-15%, 0%);
+    -moz-transform: translate(-15%, 0%);
+    -ms-transform: translate(-15%, 0%);
+    -o-transform: translate(-15%, 0%);
+  }
+
+  .form input,
+  select {
+    margin: 0 5px 10px 5px;
+    width: inherit;
+    font-size: 0.3rem;
+    border: 0.7px solid #474343b6;
+  }
+
+  .check {
+    left: 83%;
+  }
+
+  .passbtn {
+    margin-top: 10px;
+  }
+
+  .leftside h1 {
+    font-size: 0.8rem;
+  }
+
+  .rightside {
+    display: none;
+  }
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.5rem;
+    width: 50px;
+    height: 20px;
+
+  }
+
+  .copyright {
+    font-size: 0.5rem;
+
+  }
+
+  #randpass {
+    font-size: 0.5rem;
+    margin-top: 0px;
+  }
+
+  .backhome {
+    width: 70px;
+    height: 30px;
+    font-size: 0.5rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+
+  .privtxt h2 {
+    font-size: 0.5rem;
+  }
+
+  .privtxt p {
+    font-size: 0.3rem;
+  }
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.8;
+    transform: translate(20%, 5%);
+    -moz-transform: translate(20%, 5%);
+    -ms-transform: translate(20%, 5%);
+    -o-transform: translate(20%, 5%);
+    -webkit-transform: translate(20%, 5%);
+  }
+
+  .privacytop h1 {
+    margin-top: 30%;
+  }
+
+  .abouttop h1 {
+    margin-top: 50%;
+  }
+
+}
+
+
+
+@media screen and (max-height: 500px) {
+  .home h3 {
+    font-size: 0.5rem;
+    margin-top: 0px;
+  }
+
+  .home #randpass {
+    margin-top: 20px;
+  }
+
+  .home .btn {
+    font-size: 0.6rem;
+    margin-top: 5px;
+    width: 100px;
+    height: 30px;
+  }
+
+  #copy {
+    left: 20%;
+    font-size: 0.5rem;
+    width: 50px;
+    height: 30px;
+  }
+
+  .form h4 {
+    font-size: 0.5rem;
+    margin-bottom: 30px;
+  }
+
+  .form p {
+    font-size: 0.3rem;
+    margin-right: 10px;
+  }
+
+  .rightside {
+    padding: 15px;
+    width: 30%;
+  }
+
+
+  .rightside p {
+    font-size: 0.4rem;
+  }
+
+
+  .form {
+    width: 250px;
+    transform: translate(20%, 5%);
+    -webkit-transform: translate(20%, 5%);
+    -moz-transform: translate(20%, 5%);
+    -ms-transform: translate(20%, 5%);
+    -o-transform: translate(20%, 5%);
+  }
+
+  .form input,
+  select {
+    margin: 0 5px 10px 7px;
+    width: inherit;
+    font-size: 0.3rem;
+    border: 0.7px solid #474343b6;
+  }
+
+  .check {
+    left: 82%;
+  }
+
+  .passbtn {
+    margin-top: 10px;
+  }
+
+  .leftside h1 {
+    font-size: 0.7rem;
+  }
+
+
+  .passbtn .submit,
+  .passbtn .reset {
+    font-size: 0.5rem;
+    width: 50px;
+    height: 20px;
+
+  }
+
+  .copyright {
+    font-size: 0.5rem;
+
+  }
+
+
+  .backhome {
+    width: 100px;
+    height: 50px;
+    font-size: 0.5rem;
+    background: linear-gradient(57deg, #4bc69f, #178bb5);
+    border: 1px solid white;
+    color: white;
+  }
+
+
+  .privtxt h2 {
+    font-size: 0.5rem;
+  }
+
+  .privtxt p {
+    font-size: 0.3rem;
+  }
+
+  .privtxt {
+    max-width: 70%;
+    left: 50%;
+    top: 50%;
+    line-height: 1.8;
+    transform: translate(20%, 5%);
+    -moz-transform: translate(20%, 5%);
+    -ms-transform: translate(20%, 5%);
+    -o-transform: translate(20%, 5%);
+    -webkit-transform: translate(20%, 5%);
+  }
+
+  .privacytop h1 {
+    margin-top: 0%;
+  }
+
+  .abouttop h1 {
+    margin-top: 0%;
+  }
+
+}
